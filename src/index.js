@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const onlinePeersText = document.getElementById('onlinePeersText')
     const messagePreview = document.getElementById('messagePreview')
     const notice = document.getElementById('notice')
-    messageBox.setAttribute("placeholder", language["start"])
+    messageBox.setAttribute("data-placeholder", language["start"])
     notice.textContent = language["notice"]
     messagePreview.textContent = language["preview-init"]
     onlinePeersText.textContent = language["online-peers"]
@@ -78,12 +78,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     function testPeerNumbers() {
         peerNumber.textContent = String(libp2p.services.pubsub.getSubscribers(language["channel"]).length)
         if (libp2p.services.pubsub.getSubscribers(language["channel"]).length != 0) {
-            messageBox.placeholder = language["peers-found"]
-            messageBox.removeAttribute("disabled")
+            messageBox.setAttribute("data-placeholder",language["peers-found"])
+            messageBox.setAttribute("contenteditable",true)
         }
         else {
-            messageBox.placeholder = language["waiting"]
-            messageBox.setAttribute("disabled", "disabled")
+            messageBox.setAttribute("data-placeholder",language["waiting"])
+            messageBox.setAttribute("contenteditable", false)
         }
     }
     function testPeerAvailability() {
@@ -164,26 +164,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     //That's how usual chat apps process Enter
     document.addEventListener('keydown', (event) => {
         if (event.ctrlKey && event.key === 'Enter') {
-            send(messageBox.value)
-            messageBox.value = ''
+            send(messageBox.innerText)
+            messageBox.innerText = ''
         }
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.value, { mangle: false, headerIds: false }))
+        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
     })
     //And that's for phone users
     notice.addEventListener('click', () => {
-        send(messageBox.value)
-        messageBox.value = ''
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.value, { mangle: false, headerIds: false }))
+        send(messageBox.innerText)
+        messageBox.innerText = ''
+        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
     })
     //Detect the change of the message box more precisely
     messageBox.addEventListener('keyup', () => {
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.value, { mangle: false, headerIds: false }))
-    })
-    messageBox.addEventListener('change', () => {
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.value, { mangle: false, headerIds: false }))
+        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
     })
     messageBox.addEventListener("input", () => {
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.value, { mangle: false, headerIds: false }))
+        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
     })
     //To avoid residual connections when closing the window
     window.addEventListener('beforeunload', function () {
@@ -191,7 +188,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             libp2p.hangUp(conn.remotePeer)
         })
     })
-    messageBox.placeholder = language["waiting"]
+    messageBox.setAttribute("data-placeholder",language["waiting"])
     log(`libp2p id is ${libp2p.peerId.toString()}`)
     setInterval(testPeerNumbers, 1000)
     //For debug

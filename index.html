@@ -7,35 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YuTai Teahouse</title>
     <link rel="stylesheet" href="./src/main.css">
-    <style>
-        .github-corner:hover .octo-arm {
-            animation: octocat-wave 560ms ease-in-out
-        }
-
-        @keyframes octocat-wave {
-            0%,100% {
-                transform: rotate(0)
-            }
-
-            20%,60% {
-                transform: rotate(-25deg)
-            }
-
-            40%,80% {
-                transform: rotate(10deg)
-            }
-        }
-
-        @media (max-width:500px) {
-            .github-corner:hover .octo-arm {
-                animation: none
-            }
-
-            .github-corner .octo-arm {
-                animation: octocat-wave 560ms ease-in-out
-            }
-        }
-    </style>
 </head>
 
 <body class="bg-discord-dark font-sans">
@@ -44,7 +15,7 @@
         <h2 class="opacity-50 fixed left-0 top-0 z-50"><div id="onlinePeersText" class="inline"></div><div id="peerNumber" class="inline"></div></h2>
         <div id="output" class=" border-black rounded-lg pb-72 pt-8"></div>
         <div class="divide-y divide-white border-white">
-            <textarea type="text" id="messageBox" class="bg-discord-dialogue text-discord-text h-32 w-full block fixed inset-x-0 bottom-6" disabled="disabled"></textarea>
+            <div contenteditable=false id="messageBox" class="bg-discord-dialogue text-discord-text h-32 w-full block fixed inset-x-0 bottom-6"></div>
             <div id="messagePreview" class="h-32 w-full block fixed inset-x-0 bottom-38"></div>
         </div>
         <div id="notice" class="fixed left-2 bottom-0 text-sm"></div>
