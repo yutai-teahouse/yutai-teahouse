@@ -84,7 +84,7 @@ Listed by the priority.
 
 ## License
 
-This responsitory is licensed under both Anti-996 license and GPL v2 license. In case of conflicts, the Anti-996 license shall prevail.  See `LICENSE-GPLv2` and `LICENSE-Anti996` for detail. 
+This responsitory is licensed under both Anti-996 license and GPL v2 license. In case of contradiction, the Anti-996 license shall prevail.  See `LICENSE-GPLv2` and `LICENSE-Anti996` for detail. 
 
 ## FAQs
 
@@ -92,6 +92,7 @@ This responsitory is licensed under both Anti-996 license and GPL v2 license. In
 - This name comes from Lao She's famous play "The Teahouse". When I was reading the lines of the play, I was wandering, "What if I am a Wang Lifa at now, how would I run it?" Then I saw a period of description of the teahouse at the beggining of the play: 
 
 > In the teahouses one could hear the most absurd stories, such as how in a certain place a huge spider had turned into a demon and was then struck by lightening. One could also come in contact with the strangest views; for example, that foreign troops could be prevented from landing by building a Great Wall along the sea coast. Here one might also hear about the latest tune composed by some Beijing Opera star, or the best way to prepare opium. In the teahouses one might also see rare art objects newly acquired by some patron -- a jade fan pendant, recently unearthed, or a three-colour glazed snuff bottle. Yes, the teahouse was indeed an important place; it could even be reckoned a kind of cultural centre.
+
 > (COPYRIGHT CLAIM: The copyright of this work has expired according to the relevant laws of PRC)
 
 That's where my inspiration of this project come from.

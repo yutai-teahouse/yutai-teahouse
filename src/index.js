@@ -8,16 +8,27 @@ import { bootstrap } from '@libp2p/bootstrap'
 import { kadDHT } from '@libp2p/kad-dht'
 import { gossipsub } from '@chainsafe/libp2p-gossipsub'
 import { marked } from 'marked'
+import { markedEmoji } from "marked-emoji"
 import DOMPurify from 'isomorphic-dompurify'
 import languageResource from "./languages.json"
+import emojiResource from "./emojis.json"
 
 document.addEventListener('DOMContentLoaded', async () => {
 
     // Read the system language
     const lang = navigator.language
+    document.getElementsByTagName("html")[0].setAttribute("lang", lang)//To avoid the annoying translation popup
     const language = languageResource[lang] || languageResource['en-US']//English as a fallback
 
     const wrtcStar = webRTCStar()
+    // Load emoji resources
+    // As the usage of Github is not stable in China,
+    // here we use a local copy of https://api.github.com/emojis.
+    const emojiOptions = {
+        unicode: false,
+        emojis: emojiResource,
+    }
+    marked.use(markedEmoji(emojiOptions))
     // Create our libp2p node
     const libp2p = await createLibp2p({
         dht: kadDHT(),
