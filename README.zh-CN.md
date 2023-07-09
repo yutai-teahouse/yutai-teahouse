@@ -2,7 +2,7 @@
 # 语台茶馆
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
-[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![Anti996 LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 [![GPLv2 License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -68,7 +68,7 @@ npm run build
 
 - **聊天室按语言划分。** 它会检测你的浏览器语言，然后把界面和聊天室切换成你所在的语言。
 
-- **没有消息记录** 把聊天窗口关了消息就没了。
+- **没有消息记录。** 把聊天窗口关了消息就没了。
 
 - **支持Markdown。** 现在富文本聊天已经很常见了，为此我加入了Markdown。
 
@@ -90,8 +90,8 @@ npm run build
 本项目由GPL v2许可证和Anti-996许可证叠加许可，其中若有矛盾部分，以Anti-996许可证为准。详情请见`LICENSE-GPLv2`和`LICENSE-Anti996`。
 
 ## 常见问题
-- 为什么要管这玩意叫 **“裕泰茶馆”** 呢？
--  这个名字来自于老舍的知名剧本《茶馆》。我在读《茶馆》时，就在想："如果我现在是王利发，我会怎么办呢？" 然后，在《茶馆》的开头，我看到有一段是这么写的： 
+- 为什么要管这玩意叫 **“语台茶馆”** 呢？
+- **“语台茶馆”**谐音自**“裕泰茶馆”**，来自于老舍的知名剧本《茶馆》。我在读《茶馆》时，就在想："如果我现在是王利发，我会怎么办呢？" 然后，在《茶馆》的开头，我看到有一段是这么写的： 
 
 >在这里，可以听到最荒唐的新闻，如某处的大蜘蛛怎么成了精，受到雷击。奇怪的意见也在这里可以听到，像把海边上都修上大墙，就足以挡住洋兵上岸。这里还可以听到某京戏演员新近创造了什么腔儿，和煎熬鸦片烟的最好的方法。这里也可以看到某人新得到的奇珍──一个出土的玉扇坠儿，或三彩的鼻烟壶。这真是个重要的地方，简直可以算作文化交流的所在。
 
