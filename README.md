@@ -75,7 +75,7 @@ As I mentioned above, this reponsitory is still in alpha test. There is LOTS of 
 Listed by the priority.
 
 1) Realize the manual selection of languages
-2) ~~Translation of UI to other languages~~ Github Copilot really helps when it comes to multi-language support.
+2) ~~Translation of UI to other languages~~ Github Copilot really helps when it comes to i18n.
 3) Have the UI beautified
 4) Realize content filtering
 5) Find & kill the bugs
@@ -106,6 +106,8 @@ That's where my inspiration of this project come from.
 [tailwindcss](https://github.com/tailwindlabs/tailwindcss) and its supporting modules ( Listed in `package.json` and `package-lock.json`)
 
 [DOMPurify](https://github.com/cure53/DOMPurify) and its supporting modules ( Listed in `package.json` and `package-lock.json`)
+
+[emoji-mart](https://github.com/missive/emoji-mart) and its supporting modules ( Listed in `package.json` and `package-lock.json`)
 
 
 ## Contact

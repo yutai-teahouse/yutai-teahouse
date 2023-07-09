@@ -1,3 +1,4 @@
+// Libp2p modules
 import { createLibp2p } from 'libp2p'
 import { webSockets } from '@libp2p/websockets'
 import { webRTCStar } from '@libp2p/webrtc-star'
@@ -7,10 +8,14 @@ import { yamux } from '@chainsafe/libp2p-yamux'
 import { bootstrap } from '@libp2p/bootstrap'
 import { kadDHT } from '@libp2p/kad-dht'
 import { gossipsub } from '@chainsafe/libp2p-gossipsub'
+// Markdown modules
 import { marked } from 'marked'
 import { markedEmoji } from "marked-emoji"
 import DOMPurify from 'isomorphic-dompurify'
 import languageResource from "./languages.json"
+// Emoji modules
+import data from '@emoji-mart/data'
+import { Picker } from 'emoji-mart'
 import emojiResource from "./emojis.json"
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -19,8 +24,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lang = navigator.language
     document.getElementsByTagName("html")[0].setAttribute("lang", lang)//To avoid the annoying translation popup
     const language = languageResource[lang] || languageResource['en-US']//English as a fallback
+    document.getElementsByTagName("title")[0].innerText = language["title"]
 
-    const wrtcStar = webRTCStar()
+    // UI elements
+    const output = document.getElementById('output')
+    const messageBox = document.getElementById('messageBox')
+    const peerNumber = document.getElementById('peerNumber')
+    const onlinePeersText = document.getElementById('onlinePeersText')
+    const messagePreview = document.getElementById('messagePreview')
+    const notice = document.getElementById('notice')
+    const emojiButton = document.getElementById('emojiButton')
+    messageBox.setAttribute("data-placeholder", language["start"])
+    notice.textContent = language["notice"]
+    messagePreview.textContent = language["preview-init"]
+    onlinePeersText.textContent = language["online-peers"]
+    output.textContent = ''
+
     // Load emoji resources
     // As the usage of Github is not stable in China,
     // here we use a local copy of https://api.github.com/emojis.
@@ -28,8 +47,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         unicode: false,
         emojis: emojiResource,
     }
-    marked.use(markedEmoji(emojiOptions))
+    const EmojiExtension = markedEmoji(emojiOptions)
+    EmojiExtension.extensions[0].renderer = function (token) {
+        if (token.unicode) {
+            return token.emoji;
+        } else {
+            return `<img class="w-6 inline" alt="${token.name}" src="${token.emoji}"${this.parser.options.xhtml ? ' /' : ''}>`;
+        }
+    }
+    marked.use(EmojiExtension)
     // Create our libp2p node
+    const wrtcStar = webRTCStar()
     const libp2p = await createLibp2p({
         dht: kadDHT(),
         addresses: {
@@ -68,18 +96,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     libp2p.services.pubsub.subscribe(language["channel"])
 
-    // UI elements
-    const output = document.getElementById('output')
-    const messageBox = document.getElementById('messageBox')
-    const peerNumber = document.getElementById('peerNumber')
-    const onlinePeersText = document.getElementById('onlinePeersText')
-    const messagePreview = document.getElementById('messagePreview')
-    const notice = document.getElementById('notice')
-    messageBox.setAttribute("data-placeholder", language["start"])
-    notice.textContent = language["notice"]
-    messagePreview.textContent = language["preview-init"]
-    onlinePeersText.textContent = language["online-peers"]
-    output.textContent = ''
 
     //To log the peer status
     function log(txt) {
@@ -198,6 +214,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         libp2p.getConnections().forEach((conn) => {
             libp2p.hangUp(conn.remotePeer)
         })
+    })
+    const pickerOptions = {
+        data,
+        onEmojiSelect: (emoji) => {
+            messageBox.innerText += emoji.shortcodes
+            messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
+        }
+    }
+
+    //config the emoji picker
+    const emojiPicker = new Picker(pickerOptions)
+    emojiPicker.className = "fixed top-0 right-0 hidden"
+    document.getElementsByTagName("body")[0].appendChild(emojiPicker)
+
+    //Reponsive emoji button
+    emojiButton.addEventListener('click', () => {
+        emojiPicker.classList.toggle("hidden")
     })
     messageBox.setAttribute("data-placeholder",language["waiting"])
     log(`libp2p id is ${libp2p.peerId.toString()}`)

@@ -78,7 +78,7 @@ npm run build
 
 ### 待办事项
 1) 实现语言的手动选择
-2) ~~把UI翻译成别的语言~~ 在做多语言的时候Github Gopilot真心好用
+2) ~~把UI翻译成别的语言~~ 在做i18n的时候Github Gopilot真心好用
 3) 美化一下UI
 4) 实现内容过滤
 5) 找Bug
@@ -106,6 +106,8 @@ npm run build
 [tailwindcss](https://github.com/tailwindlabs/tailwindcss) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
 
 [DOMPurify](https://github.com/cure53/DOMPurify) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
+
+[emoji-mart](https://github.com/missive/emoji-mart/) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
 
 ## 联系我
 
