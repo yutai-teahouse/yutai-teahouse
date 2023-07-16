@@ -64,7 +64,7 @@ npm run build
 
 - **No message recorded.** No message is stored after closing your chat window.
 
-- **Markdown support.** It is common to see rich-text message this days, and here, we realized it using markdown.
+- **Markdown support.** It is common to see rich-text message this days, and here, I realized it using markdown.
 
 ## Contributing
 
@@ -74,13 +74,12 @@ As I mentioned above, this reponsitory is still in alpha test. There is LOTS of 
 
 Listed by the priority.
 
-1) Realize the manual selection of languages
-2) ~~Translation of UI to other languages~~ Github Copilot really helps when it comes to i18n.
-3) Have the UI beautified
-4) Realize content filtering
-5) Find & kill the bugs
-6) Design an icon
-7) Remove the herobrine
+1)  Add a test suit and workflow
+2) Have the UI beautified
+3) Realize content filtering
+4) Find & kill the bugs
+5) Design an icon
+6) Remove the herobrine
 
 ## License
 

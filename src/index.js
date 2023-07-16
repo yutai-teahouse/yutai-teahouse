@@ -20,8 +20,11 @@ import emojiResource from "./emojis.json"
 
 document.addEventListener('DOMContentLoaded', async () => {
 
-    // Read the system language
-    const lang = navigator.language
+    // Read the system language if not set
+    if (!localStorage["language"]) { 
+        localStorage.setItem("language", navigator.language)
+    }
+    const lang = localStorage["language"]
     document.getElementsByTagName("html")[0].setAttribute("lang", lang)//To avoid the annoying translation popup
     const language = languageResource[lang] || languageResource['en-US']//English as a fallback
     document.getElementsByTagName("title")[0].innerText = language["title"]
@@ -36,10 +39,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     const emojiButton = document.getElementById('emojiButton')
     messageBox.setAttribute("data-placeholder", language["start"])
     notice.textContent = language["notice"]
-    messagePreview.textContent = language["preview-init"]
+    messagePreview.setAttribute("data-palceholder", language["preview-init"])
     onlinePeersText.textContent = language["online-peers"]
     output.textContent = ''
 
+    //Set up language selection
+    const languageSelect = document.getElementById('languageSelect')
+    for (const [key, value] of Object.entries(languageResource)) {
+        const option = document.createElement("option")
+        option.value = key
+        option.text = value["lang_name"]
+        option.className = "absolute right-0 z-10 mt-2 w-56 text-black origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        if (key == lang) {
+            option.setAttribute("selected", "selected")
+        }
+        languageSelect.appendChild(option)
+    }
+    //Detect user selection of language
+    languageSelect.addEventListener('change', () => {
+        localStorage.setItem("language", languageSelect.value)
+        location.reload()
+    })
     // Load emoji resources
     // As the usage of Github is not stable in China,
     // here we use a local copy of https://api.github.com/emojis.
@@ -223,6 +243,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    
     //config the emoji picker
     const emojiPicker = new Picker(pickerOptions)
     emojiPicker.className = "fixed top-0 right-0 hidden"
