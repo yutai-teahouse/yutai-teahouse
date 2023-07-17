@@ -18,6 +18,10 @@ import data from '@emoji-mart/data'
 import { Picker } from 'emoji-mart'
 import emojiResource from "./emojis.json"
 
+// Browser update configuration
+// eslint-disable-next-line no-unused-vars
+var $buoop = { required: { e: -4, f: -3, o: -3, s: -1, c: -3 }, insecure: true, unsupported: true, api: 2023.07 };
+
 document.addEventListener('DOMContentLoaded', async () => {
 
     // Read the system language if not set
@@ -42,6 +46,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     messagePreview.setAttribute("data-palceholder", language["preview-init"])
     onlinePeersText.textContent = language["online-peers"]
     output.textContent = ''
+
+    // Browser update notification
+    var e = document.createElement("script");
+    e.src = "//browser-update.org/update.min.js";
+    document.body.appendChild(e);
 
     //Set up language selection
     const languageSelect = document.getElementById('languageSelect')
@@ -78,41 +87,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     marked.use(EmojiExtension)
     // Create our libp2p node
     const wrtcStar = webRTCStar()
-    const libp2p = await createLibp2p({
-        dht: kadDHT(),
-        addresses: {
-            listen: [
-                '/dns4/wrtc-star1.par.dwebops.pub/tcp/443/wss/p2p-webrtc-star',
-                '/dns4/wrtc-star2.sjc.dwebops.pub/tcp/443/wss/p2p-webrtc-star',
-            ]
-        },
-        transports: [
-            webSockets(),
-            wrtcStar.transport
-        ],
-        connectionEncryption: [noise()],
-        streamMuxers: [yamux(), mplex()],
-        peerDiscovery: [
-            wrtcStar.discovery,
-            kadDHT(),
-            bootstrap({
-                list: [
-                    '/dnsaddr/bootstrap.libp2p.io/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN',
-                    '/dnsaddr/bootstrap.libp2p.io/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb',
-                    '/dnsaddr/bootstrap.libp2p.io/p2p/QmZa1sAxajnQjVM8WjWXoMbmPd7NsWhfKsPkErzpm9wGkp',
-                    '/dnsaddr/bootstrap.libp2p.io/p2p/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa',
-                    '/dnsaddr/bootstrap.libp2p.io/p2p/QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt'
+    let libp2p
+    try {
+        libp2p = await createLibp2p({
+            dht: kadDHT(),
+            addresses: {
+                listen: [
+                    '/dns4/wrtc-star1.par.dwebops.pub/tcp/443/wss/p2p-webrtc-star',
+                    '/dns4/wrtc-star2.sjc.dwebops.pub/tcp/443/wss/p2p-webrtc-star',
                 ]
-            })
-        ],
-        connectionManager: {
-            maxConnections: 5,
-            minConnections: 0
-        },
-        services: {
-            pubsub: gossipsub({ emitSelf: true })
-        }
-    })
+            },
+            transports: [
+                webSockets(),
+                wrtcStar.transport
+            ],
+            connectionEncryption: [noise()],
+            streamMuxers: [yamux(), mplex()],
+            peerDiscovery: [
+                wrtcStar.discovery,
+                kadDHT(),
+                bootstrap({
+                    list: [
+                        '/dnsaddr/bootstrap.libp2p.io/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN',
+                        '/dnsaddr/bootstrap.libp2p.io/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb',
+                        '/dnsaddr/bootstrap.libp2p.io/p2p/QmZa1sAxajnQjVM8WjWXoMbmPd7NsWhfKsPkErzpm9wGkp',
+                        '/dnsaddr/bootstrap.libp2p.io/p2p/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa',
+                        '/dnsaddr/bootstrap.libp2p.io/p2p/QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt'
+                    ]
+                })
+            ],
+            connectionManager: {
+                maxConnections: 5,
+                minConnections: 0
+            },
+            services: {
+                pubsub: gossipsub({ emitSelf: true })
+            }
+        })
+    } catch (err) {
+        alert(language["libp2p-error"])
+    }
+    
 
     libp2p.services.pubsub.subscribe(language["channel"])
 
@@ -194,9 +209,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         var timestamp = document.createElement("div")
         messageFrom.textContent = String(message.detail.from)
         messageFrom.className = "text-sm text-sky-600 inline-block pr-4"
-        timestamp.textContent = language["posted-at"] + new Date().toLocaleTimeString()
+        timestamp.textContent = language["posted-at"] + " " + new Date().toLocaleTimeString()
         timestamp.className = "text-xs text-gray-500 inline-block"
-        messageContent.innerHTML = DOMPurify.sanitize(marked.parse(messageString, {mangle: false, headerIds: false}))
+        messageContent.innerHTML = `<div class="messageContents">${DOMPurify.sanitize(marked.parse(messageString, { mangle: false, headerIds: false }))}</div>`
         newElement.appendChild(messageFrom)
         newElement.appendChild(timestamp)
         newElement.appendChild(messageContent)

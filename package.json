@@ -22,7 +22,6 @@
     "@libp2p/interface-pubsub": "^4.0.1",
     "@libp2p/kad-dht": "9.3.6",
     "@libp2p/mplex": "^8.0.1",
-    "@libp2p/pubsub-peer-discovery": "^8.0.4",
     "@libp2p/webrtc-star": "^7.0.0",
     "@libp2p/websockets": "^6.0.1",
     "@octokit/rest": "^19.0.13",
@@ -34,7 +33,7 @@
     "postcss-cli": "^10.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.35.1",
+    "@playwright/test": "^1.36.1",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
     "postcss": "^8.4.24",

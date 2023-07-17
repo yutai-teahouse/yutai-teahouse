@@ -9,7 +9,8 @@
     "preview-init": "سيتم عرض معاينة الرسالة هنا.",
     "start": "جاري التهيئة...",
     "title": "بيت الشاي يوتاي",
-    "waiting": "تم التهيئة بنجاح، في انتظار اتصال المستخدمين..."
+    "waiting": "تم التهيئة بنجاح، في انتظار اتصال المستخدمين...",
+    "libp2p-error": "فشلت التهيئة ، يرجى التحديث أو تغيير المستعرض الخاص بك!"
   },
   "da": {
     "channel": "/yutai-teahouse/da",
@@ -21,7 +22,8 @@
     "preview-init": "Her vil din besked blive vist.",
     "start": "Initialiserer...",
     "title": "Yutai Teahouse",
-    "waiting": "Initialisering fuldført, venter på brugere..."
+    "waiting": "Initialisering fuldført, venter på brugere...",
+    "libp2p-error": "Initialisering mislykkedes, opdater venligst eller skift browser!"
   },
   "de": {
     "channel": "/yutai-teahouse/de",
@@ -33,7 +35,8 @@
     "preview-init": "Hier wird deine Nachricht angezeigt.",
     "start": "Initialisiere...",
     "title": "Yutai Teahouse",
-    "waiting": "Initialisierung erfolgreich, warte auf Benutzer..."
+    "waiting": "Initialisierung erfolgreich, warte auf Benutzer...",
+    "libp2p-error": "Initialisierung fehlgeschlagen, bitte aktualisiere oder wechsle deinen Browser!"
   },
   "dl": {
     "channel": "/yutai-teahouse/dl",
@@ -45,7 +48,8 @@
     "preview-init": "Tutón tekst běšeš widźeć.",
     "start": "Inicializěruju...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicializacija wuspěšna, čakam na wužiwarjow..."
+    "waiting": "Inicializacija wuspěšna, čakam na wužiwarjow...",
+    "libp2p-error": "Inicializacija se nezdała, prošu aktualizuj abo změń swój wobhladowak!"
   },
   "en-US": {
     "channel": "/yutai-teahouse/en",
@@ -57,7 +61,8 @@
     "preview-init": "Your message will be displayed here.",
     "start": "Initializing...",
     "title": "Yutai Teahouse",
-    "waiting": "Initialization successful, waiting for users..."
+    "waiting": "Initialization successful, waiting for users...",
+    "libp2p-error": "Initialization failed, please update or change your browser!"
   },
   "eo": {
     "channel": "/yutai-teahouse/eo",
@@ -69,7 +74,8 @@
     "preview-init": "Via mesaĝo estos montrita ĉi tie.",
     "start": "Inicializante...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicializado sukcese, atendante uzantojn..."
+    "waiting": "Inicializado sukcese, atendante uzantojn...",
+    "libp2p-error": "Inicializado malsukcesis, bonvolu ĝisdatigi aŭ ŝanĝi vian retumilon!"
   },
   "es": {
     "channel": "/yutai-teahouse/es",
@@ -81,7 +87,8 @@
     "preview-init": "Tu mensaje será mostrado aquí.",
     "start": "Inicializando...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicialización exitosa, esperando usuarios..."
+    "waiting": "Inicialización exitosa, esperando usuarios...",
+    "libp2p-error": "Inicialización fallida, ¡por favor actualiza o cambia tu navegador!"
   },
   "fr": {
     "channel": "/yutai-teahouse/fr",
@@ -93,7 +100,8 @@
     "preview-init": "Votre message sera affiché ici.",
     "start": "Initialisation...",
     "title": "Yutai Teahouse",
-    "waiting": "Initialisation réussie, en attente d'utilisateurs..."
+    "waiting": "Initialisation réussie, en attente d'utilisateurs...",
+    "libp2p-error": "Initialisation échouée, veuillez mettre à jour ou changer votre navigateur !"
   },
   "he": {
     "channel": "/yutai-teahouse/he",
@@ -105,7 +113,8 @@
     "preview-init": "ההודעה שלך תוצג כאן.",
     "start": "מאתחל...",
     "title": "בית התה יוטאי",
-    "waiting": "האתחול הסתיים בהצלחה, ממתין למשתמשים..."
+    "waiting": "האתחול הסתיים בהצלחה, ממתין למשתמשים...",
+    "libp2p-error": "האתחול נכשל, עדכן או החלף את הדפדפן שלך!"
   },
   "hi": {
     "channel": "/yutai-teahouse/hi",
@@ -117,7 +126,8 @@
     "preview-init": "आपका संदेश यहां प्रदर्शित किया जाएगा।",
     "start": "प्रारंभ कर रहा हूँ...",
     "title": "युताई चायघर",
-    "waiting": "प्रारंभीकरण सफल, उपयोगकर्ताओं की प्रतीक्षा कर रहा हूँ..."
+    "waiting": "प्रारंभीकरण सफल, उपयोगकर्ताओं की प्रतीक्षा कर रहा हूँ...",
+    "libp2p-error": "प्रारंभीकरण विफल, कृपया अपना ब्राउज़र अपडेट करें या बदलें!"
   },
   "hu": {
     "channel": "/yutai-teahouse/hu",
@@ -129,7 +139,8 @@
     "preview-init": "Az üzeneted itt fog megjelenni.",
     "start": "Inicializálás...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicializálás sikeres, várakozás felhasználókra..."
+    "waiting": "Inicializálás sikeres, várakozás felhasználókra...",
+    "libp2p-error": "Inicializálás sikertelen, kérlek frissítsd vagy cseréld le a böngésződet!"
   },
   "id": {
     "channel": "/yutai-teahouse/id",
@@ -141,7 +152,8 @@
     "preview-init": "Pesan Anda akan ditampilkan di sini.",
     "start": "Menginisialisasi...",
     "title": "Yutai Teahouse",
-    "waiting": "Inisialisasi berhasil, menunggu pengguna..."
+    "waiting": "Inisialisasi berhasil, menunggu pengguna...",
+    "libp2p-error": "Inisialisasi gagal, harap perbarui atau ganti browser Anda!"
   },
   "it": {
     "channel": "/yutai-teahouse/it",
@@ -153,7 +165,8 @@
     "preview-init": "Il tuo messaggio verrà mostrato qui.",
     "start": "Inizializzazione...",
     "title": "Yutai Teahouse",
-    "waiting": "Inizializzazione riuscita, in attesa di utenti..."
+    "waiting": "Inizializzazione riuscita, in attesa di utenti...",
+    "libp2p-error": "Inizializzazione fallita, aggiorna o cambia il tuo browser!"
   },
   "ja": {
     "channel": "/yutai-teahouse/ja",
@@ -165,7 +178,8 @@
     "preview-init": "あなたのメッセージはここに表示されます。",
     "start": "初期化中...",
     "title": "Yutai Teahouse",
-    "waiting": "初期化に成功しました。ユーザーを待っています..."
+    "waiting": "初期化に成功しました。ユーザーを待っています...",
+    "libp2p-error": "初期化に失敗しました。ブラウザを更新するか、ブラウザを変更してください！"
   },
   "ko": {
     "channel": "/yutai-teahouse/ko",
@@ -177,7 +191,8 @@
     "preview-init": "메시지가 여기에 표시됩니다.",
     "start": "초기화 중...",
     "title": "Yutai Teahouse",
-    "waiting": "초기화 성공, 사용자를 기다리는 중..."
+    "waiting": "초기화 성공, 사용자를 기다리는 중...",
+    "libp2p-error": "초기화 실패, 브라우저를 업데이트하거나 변경하십시오!"
   },
   "la": {
     "channel": "/yutai-teahouse/la",
@@ -189,7 +204,8 @@
     "preview-init": "Epistula tua hic monstrabitur.",
     "start": "Inchoans...",
     "title": "Yutai Teahouse",
-    "waiting": "Inchoatio felix, usitatores exspecto..."
+    "waiting": "Inchoatio felix, usitatores exspecto...",
+    "libp2p-error": "Inchoatio fallita, browserum tuum renovare aut mutare!"
   },
   "lo": {
     "channel": "/yutai-teahouse/lo",
@@ -201,7 +217,8 @@
     "preview-init": "ຂໍ້ຄວາມຂອງທ່ານຈະຖືກສະແດງຢູ່ນີ້.",
     "start": "ການເລີ່ມຕົ້ນ...",
     "title": "Yutai Teahouse",
-    "waiting": "ການເລີ່ມຕົ້ນສ"
+    "waiting": "ການເລີ່ມຕົ້ນສ",
+    "libp2p-error": "ການເລີ່ມຕົ້ນສະແດງຜິດພາດ, ກະລຸນາປັບປຸງບຸກຄົນຂອງທ່ານຫຼືປ່ຽນແປງບຣາວອອນລາຍຈາກນີ້!"
   },
   "lt": {
     "channel": "/yutai-teahouse/lt",
@@ -213,7 +230,8 @@
     "preview-init": "Jūsų žinutė bus rodoma čia.",
     "start": "Inicijuojama...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicijavimas pavyko, laukiami vartotojai..."
+    "waiting": "Inicijavimas pavyko, laukiami vartotojai...",
+    "libp2p-error": "Inicijavimas nepavyko, atnaujinkite arba pakeiskite savo naršyklę!"
   },
   "nl": {
     "channel": "/yutai-teahouse/nl",
@@ -225,7 +243,8 @@
     "preview-init": "Je bericht wordt hier getoond.",
     "start": "Initialiseren...",
     "title": "Yutai Teahouse",
-    "waiting": "Initialisatie gelukt, wachtend op gebruikers..."
+    "waiting": "Initialisatie gelukt, wachtend op gebruikers...",
+    "libp2p-error": "Initialisatie mislukt, vernieuw of verander je browser!"
   },
   "no": {
     "channel": "/yutai-teahouse/no",
@@ -237,7 +256,8 @@
     "preview-init": "Meldingen din vil bli vist her.",
     "start": "Initialiserer...",
     "title": "Yutai Teahouse",
-    "waiting": "Initialisering vellykket, venter på brukere..."
+    "waiting": "Initialisering vellykket, venter på brukere...",
+    "libp2p-error": "Initialisering mislyktes, oppdater eller bytt nettleser!"
   },
   "pl": {
     "channel": "/yutai-teahouse/pl",
@@ -249,7 +269,8 @@
     "preview-init": "Twoja wiadomość zostanie wyświetlona tutaj.",
     "start": "Inicjowanie...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicjowanie powiodło się, oczekiwanie na użytkowników..."
+    "waiting": "Inicjowanie powiodło się, oczekiwanie na użytkowników...",
+    "libp2p-error": "Inicjowanie nie powiodło się, zaktualizuj lub zmień przeglądarkę!"
   },
   "pt-BR": {
     "channel": "/yutai-teahouse/pt-BR",
@@ -261,7 +282,8 @@
     "preview-init": "Sua mensagem será exibida aqui.",
     "start": "Inicializando...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicialização bem-sucedida, aguardando usuários..."
+    "waiting": "Inicialização bem-sucedida, aguardando usuários...",
+    "libp2p-error": "Inicialização falhou, atualize ou mude seu navegador!"
   },
   "pt-PT": {
     "channel": "/yutai-teahouse/pt-PT",
@@ -273,7 +295,8 @@
     "preview-init": "Sua mensagem será exibida aqui.",
     "start": "Inicializando...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicialização bem-sucedida, aguardando usuários..."
+    "waiting": "Inicialização bem-sucedida, aguardando usuários...",
+    "libp2p-error": "Inicialização falhou, atualize ou mude seu navegador!"
   },
   "ro": {
     "channel": "/yutai-teahouse/ro",
@@ -285,7 +308,8 @@
     "preview-init": "Mesajul dvs. va fi afișat aici.",
     "start": "Se inițializează...",
     "title": "Yutai Teahouse",
-    "waiting": "Inițializare reușită, așteptarea utilizatorilor..."
+    "waiting": "Inițializare reușită, așteptarea utilizatorilor...",
+    "libp2p-error": "Inițializarea a eșuat, actualizați sau schimbați browserul!"
   },
   "ru": {
     "channel": "/yutai-teahouse/ru",
@@ -297,7 +321,8 @@
     "preview-init": "Ваше сообщение будет отображаться здесь.",
     "start": "Инициализация...",
     "title": "Yutai Teahouse",
-    "waiting": "Инициализация прошла успешно, ожидание пользователей..."
+    "waiting": "Инициализация прошла успешно, ожидание пользователей...",
+    "libp2p-error": "Инициализация не удалась, обновите или измените браузер!"
   },
   "sk": {
     "channel": "/yutai-teahouse/sk",
@@ -309,7 +334,8 @@
     "preview-init": "Vaša správa sa tu zobrazí.",
     "start": "Inicializácia...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicializácia úspešná, čakanie na používateľov..."
+    "waiting": "Inicializácia úspešná, čakanie na používateľov...",
+    "libp2p-error": "Inicializácia zlyhala, aktualizujte alebo zmeňte prehliadač!"
   },
   "sl": {
     "channel": "/yutai-teahouse/sl",
@@ -321,7 +347,8 @@
     "preview-init": "Vaše sporočilo bo prikazano tukaj.",
     "start": "Inicializacija...",
     "title": "Yutai Teahouse",
-    "waiting": "Inicializacija uspešna, čakam na uporabnike..."
+    "waiting": "Inicializacija uspešna, čakam na uporabnike...",
+    "libp2p-error": "Inicializacija ni uspela, posodobite ali spremenite brskalnik!"
   },
   "sr": {
     "channel": "/yutai-teahouse/sr",
@@ -333,7 +360,8 @@
     "preview-init": "Ваша порука ће бити приказана овде.",
     "start": "Иницијализација...",
     "title": "Yutai Teahouse",
-    "waiting": "Иницијализација успела, чекање корисника..."
+    "waiting": "Иницијализација успела, чекање корисника...",
+    "libp2p-error": "Иницијализација није успела, ажурирајте или промените прегледач!"
   },
   "sv": {
     "channel": "/yutai-teahouse/sv",
@@ -345,7 +373,8 @@
     "preview-init": "Ditt meddelande kommer att visas här.",
     "start": "Initierar...",
     "title": "Yutai Teahouse",
-    "waiting": "Initiering lyckades, väntar på användare..."
+    "waiting": "Initiering lyckades, väntar på användare...",
+    "libp2p-error": "Initiering misslyckades, uppdatera eller byt webbläsare!"
   },
   "th": {
     "channel": "/yutai-teahouse/th",
@@ -357,7 +386,8 @@
     "preview-init": "ข้อความของคุณจะปรากฏที่นี่",
     "start": "กำลังเริ่มต้น...",
     "title": "Yutai Teahouse",
-    "waiting": "เริ่มต้นสำเร็จ กำลังรอผู้ใช้..."
+    "waiting": "เริ่มต้นสำเร็จ กำลังรอผู้ใช้...",
+    "libp2p-error": "เริ่มต้นไม่สำเร็จ อัปเดตหรือเปลี่ยนเบราว์เซอร์!"
   },
   "tr": {
     "channel": "/yutai-teahouse/tr",
@@ -369,7 +399,8 @@
     "preview-init": "Mesajınız burada görüntülenecektir.",
     "start": "Başlatılıyor...",
     "title": "Yutai Teahouse",
-    "waiting": "Başlatma başarılı, kullanıcıları bekliyor..."
+    "waiting": "Başlatma başarılı, kullanıcıları bekliyor...",
+    "libp2p-error": "Başlatma başarısız oldu, tarayıcıyı güncelleyin veya değiştirin!"
   },
   "uk": {
     "channel": "/yutai-teahouse/uk",
@@ -381,7 +412,8 @@
     "preview-init": "Ваше повідомлення буде відображатися тут.",
     "start": "Ініціалізація...",
     "title": "Yutai Teahouse",
-    "waiting": "Ініціалізація успішна, чекаю на користувачів..."
+    "waiting": "Ініціалізація успішна, чекаю на користувачів...",
+    "libp2p-error": "Ініціалізація не вдалася, оновіть або змініть браузер!"
   },
   "vi": {
     "channel": "/yutai-teahouse/vi",
@@ -393,7 +425,8 @@
     "preview-init": "Tin nhắn của bạn sẽ được hiển thị ở đây.",
     "start": "Khởi tạo...",
     "title": "Yutai Teahouse",
-    "waiting": "Khởi tạo thành công, đang chờ người dùng..."
+    "waiting": "Khởi tạo thành công, đang chờ người dùng...",
+    "libp2p-error": "Khởi tạo không thành công, vui lòng cập nhật hoặc thay đổi trình duyệt!"
   },
   "zh-CN": {
     "channel": "/yutai-teahouse/zh-CN",
@@ -405,7 +438,8 @@
     "preview-init": "这里将会显示你的消息预览。",
     "start": "正在初始化...",
     "title": "语台茶馆",
-    "waiting": "初始化成功，正在等待节点连接..."
+    "waiting": "初始化成功，正在等待节点连接...",
+    "libp2p-error": "初始化失败，请更新或更换浏览器！"
   },
   "zh-HK": {
     "channel": "/yutai-teahouse/zh-HK",
@@ -417,7 +451,8 @@
     "preview-init": "您的訊息將會顯示在這裡。",
     "start": "初始化中...",
     "title": "Yutai Teahouse",
-    "waiting": "初始化成功，正在等待使用者..."
+    "waiting": "初始化成功，正在等待使用者...",
+    "libp2p-error": "初始化失敗，請更新或更換瀏覽器！"
   },
   "zh-TW": {
     "channel": "/yutai-teahouse/zh-TW",
@@ -429,6 +464,20 @@
     "preview-init": "您的訊息將會顯示在這裡。",
     "start": "初始化中...",
     "title": "Yutai Teahouse",
-    "waiting": "初始化成功，正在等待使用者..."
+    "waiting": "初始化成功，正在等待使用者...",
+    "libp2p-error": "初始化失敗，請更新或更換瀏覽器！"
+  },
+  "test": {
+    "channel": "/yutai-teahouse/test",
+    "lang_name": "For tests",
+    "notice": "Press Enter to start a new line. Press Ctrl+Enter or click here to send a message.",
+    "online-peers": "Currently online:",
+    "peers-found": "Peers found, start chatting!",
+    "posted-at": "Posted at:",
+    "preview-init": "Your message will be displayed here.",
+    "start": "Initializing...",
+    "title": "Yutai Teahouse",
+    "waiting": "Initialization successful, waiting for peers...",
+    "libp2p-error": "Initialization failed, please update or change the browser!"
   }
 }
