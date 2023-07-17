@@ -1,6 +1,6 @@
 {
   "name": "yutai-teahouse",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha",
   "description": "A decentralized chat app based on libp2p",
   "type": "module",
   "scripts": {
