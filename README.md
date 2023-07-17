@@ -74,12 +74,11 @@ As I mentioned above, this reponsitory is still in alpha test. There is LOTS of 
 
 Listed by the priority.
 
-1)  Add a test suit and workflow
-2) Have the UI beautified
-3) Realize content filtering
-4) Find & kill the bugs
-5) Design an icon
-6) Remove the herobrine
+1) Have the UI beautified
+2) Realize content filtering
+3) Find & kill the bugs
+4) Design an icon
+5) Remove the herobrine
 
 ## License
 
