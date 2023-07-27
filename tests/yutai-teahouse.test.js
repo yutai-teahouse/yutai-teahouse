@@ -18,9 +18,9 @@ test.beforeEach(async ({ browser }) => {
 });
 
 test("language selection", async () => {
-    await page.waitForFunction(() => document.getElementById("languageSelect").querySelectorAll('option').length === 37)
+    await page.waitForFunction(() => document.getElementById("languageSelect").querySelectorAll('option').length === 26)
     await page.waitForFunction(() => typeof localStorage.language == "string");
-    await page1.waitForFunction(() => document.getElementById("languageSelect").querySelectorAll('option').length === 37)
+    await page1.waitForFunction(() => document.getElementById("languageSelect").querySelectorAll('option').length === 26)
     await page1.waitForFunction(() => typeof localStorage.language == "string");
 })
 

@@ -75,10 +75,9 @@ As I mentioned above, this reponsitory is still in alpha test. There is LOTS of 
 Listed by the priority.
 
 1) Have the UI beautified
-2) Realize content filtering
-3) Find & kill the bugs
-4) Design an icon
-5) Remove the herobrine
+2) Find & kill the bugs
+3) Design an icon
+4) Remove the herobrine
 
 ## License
 
@@ -106,6 +105,10 @@ That's where my inspiration of this project come from.
 [DOMPurify](https://github.com/cure53/DOMPurify) and its supporting modules ( Listed in `package.json` and `package-lock.json`)
 
 [emoji-mart](https://github.com/missive/emoji-mart) and its supporting modules ( Listed in `package.json` and `package-lock.json`)
+
+[badwords-list](https://github.com/web-mech/badwords-list) and its supporting modules ( Listed in `package.json` and `package-lock.json`)
+
+[naughty-words](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words) and its supporting modules ( Listed in `package.json` and `package-lock.json`)
 
 
 ## Contact

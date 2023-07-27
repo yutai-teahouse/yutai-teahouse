@@ -78,10 +78,9 @@ npm run build
 
 ### 待办事项
 1) 美化一下UI
-2) 实现内容过滤
-3) 找Bug
-4) 设计个图标
-5) 移除Herobrine
+2) 找Bug
+3) 设计个图标
+4) 移除Herobrine
 
 ## 许可协议
 
@@ -106,6 +105,10 @@ npm run build
 [DOMPurify](https://github.com/cure53/DOMPurify) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
 
 [emoji-mart](https://github.com/missive/emoji-mart/) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
+
+[badwords-list](https://github.com/web-mech/badwords-list) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
+
+[naughty-words](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
 
 ## 联系我
 

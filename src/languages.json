@@ -38,19 +38,6 @@
     "waiting": "Initialisierung erfolgreich, warte auf Benutzer...",
     "libp2p-error": "Initialisierung fehlgeschlagen, bitte aktualisiere oder wechsle deinen Browser!"
   },
-  "dl": {
-    "channel": "/yutai-teahouse/dl",
-    "lang_name": "Dolnoserbšćina",
-    "notice": "Stiskaj Enter za nowy rědk, stiskaj Ctrl+Enter abo klikaj tutón, zo byš posłał wiadomość",
-    "online-peers": "Aktualnje online:",
-    "peers-found": "Wužiwarjo namakane, wotměnja z chětanjom!",
-    "posted-at": "Posłane:",
-    "preview-init": "Tutón tekst běšeš widźeć.",
-    "start": "Inicializěruju...",
-    "title": "Yutai Teahouse",
-    "waiting": "Inicializacija wuspěšna, čakam na wužiwarjow...",
-    "libp2p-error": "Inicializacija se nezdała, prošu aktualizuj abo změń swój wobhladowak!"
-  },
   "en-US": {
     "channel": "/yutai-teahouse/en",
     "lang_name": "English",
@@ -103,18 +90,18 @@
     "waiting": "Initialisation réussie, en attente d'utilisateurs...",
     "libp2p-error": "Initialisation échouée, veuillez mettre à jour ou changer votre navigateur !"
   },
-  "he": {
-    "channel": "/yutai-teahouse/he",
-    "lang_name": "עברית",
-    "notice": "לחץ על Enter כדי להתחיל שורה חדשה, לחץ על Ctrl+Enter או לחץ כאן כדי לשלוח את ההודעה",
-    "online-peers": "משתמשים מחוברים כעת:",
-    "peers-found": "משתמשים נמצאו, התחל לשוחח!",
-    "posted-at": "פורסם בתאריך:",
-    "preview-init": "ההודעה שלך תוצג כאן.",
-    "start": "מאתחל...",
-    "title": "בית התה יוטאי",
-    "waiting": "האתחול הסתיים בהצלחה, ממתין למשתמשים...",
-    "libp2p-error": "האתחול נכשל, עדכן או החלף את הדפדפן שלך!"
+  "fr-CA": {
+    "channel": "/yutai-teahouse/fr-CA",
+    "lang_name": "Français (Canada)",
+    "notice": "Appuyez sur Entrée pour commencer une nouvelle ligne, appuyez sur Ctrl+Entrée ou cliquez ici pour envoyer le message",
+    "online-peers": "Actuellement en ligne :",
+    "peers-found": "Utilisateurs trouvés, commencez à chatter !",
+    "posted-at": "Posté à :",
+    "preview-init": "Votre message sera affiché ici.",
+    "start": "Initialisation...",
+    "title": "Yutai Teahouse",
+    "waiting": "Initialisation réussie, en attente d'utilisateurs...",
+    "libp2p-error": "Initialisation échouée, veuillez mettre à jour ou changer votre navigateur !"
   },
   "hi": {
     "channel": "/yutai-teahouse/hi",
@@ -141,19 +128,6 @@
     "title": "Yutai Teahouse",
     "waiting": "Inicializálás sikeres, várakozás felhasználókra...",
     "libp2p-error": "Inicializálás sikertelen, kérlek frissítsd vagy cseréld le a böngésződet!"
-  },
-  "id": {
-    "channel": "/yutai-teahouse/id",
-    "lang_name": "Bahasa Indonesia",
-    "notice": "Tekan Enter untuk memulai baris baru, tekan Ctrl+Enter atau klik di sini untuk mengirim pesan",
-    "online-peers": "Saat ini online:",
-    "peers-found": "Pengguna ditemukan, mulai chatting!",
-    "posted-at": "Diposting pada:",
-    "preview-init": "Pesan Anda akan ditampilkan di sini.",
-    "start": "Menginisialisasi...",
-    "title": "Yutai Teahouse",
-    "waiting": "Inisialisasi berhasil, menunggu pengguna...",
-    "libp2p-error": "Inisialisasi gagal, harap perbarui atau ganti browser Anda!"
   },
   "it": {
     "channel": "/yutai-teahouse/it",
@@ -193,45 +167,6 @@
     "title": "Yutai Teahouse",
     "waiting": "초기화 성공, 사용자를 기다리는 중...",
     "libp2p-error": "초기화 실패, 브라우저를 업데이트하거나 변경하십시오!"
-  },
-  "la": {
-    "channel": "/yutai-teahouse/la",
-    "lang_name": "Latina",
-    "notice": "Utere Enter ad novam lineam incipiendam, utere Ctrl+Enter aut hic clicca ad epistulam mittere",
-    "online-peers": "Nunc online:",
-    "peers-found": "Usitatores inventi, colloquium incipe!",
-    "posted-at": "Missum:",
-    "preview-init": "Epistula tua hic monstrabitur.",
-    "start": "Inchoans...",
-    "title": "Yutai Teahouse",
-    "waiting": "Inchoatio felix, usitatores exspecto...",
-    "libp2p-error": "Inchoatio fallita, browserum tuum renovare aut mutare!"
-  },
-  "lo": {
-    "channel": "/yutai-teahouse/lo",
-    "lang_name": "ລາວ",
-    "notice": "ກົດ Enter ເພື່ອເລີ່ມແຕ່ລະຫົວຂໍ້ໃຫ້ສູງສຸດ, ແຕ່ກົດ Ctrl+Enter ຫຼືຄລິກທີ່ນີ້ເພື່ອສົ່ງຂໍ້ຄວາມ",
-    "online-peers": "ປະຈຸບັນຢູ່ປະຈຸບັນ:",
-    "peers-found": "ພະນັກງານທີ່ພົບ, ກະລຸນາເລີ່ມຕົ້ນສະຫຼາດ!",
-    "posted-at": "ອັບໂຫລດໃນ:",
-    "preview-init": "ຂໍ້ຄວາມຂອງທ່ານຈະຖືກສະແດງຢູ່ນີ້.",
-    "start": "ການເລີ່ມຕົ້ນ...",
-    "title": "Yutai Teahouse",
-    "waiting": "ການເລີ່ມຕົ້ນສ",
-    "libp2p-error": "ການເລີ່ມຕົ້ນສະແດງຜິດພາດ, ກະລຸນາປັບປຸງບຸກຄົນຂອງທ່ານຫຼືປ່ຽນແປງບຣາວອອນລາຍຈາກນີ້!"
-  },
-  "lt": {
-    "channel": "/yutai-teahouse/lt",
-    "lang_name": "Lietuvių",
-    "notice": "Norėdami pradėti naują eilutę, spustelėkite Enter. Norėdami išsiųsti žinutę, spustelėkite Ctrl+Enter arba spustelėkite čia.",
-    "online-peers": "Šiuo metu prisijungę:",
-    "peers-found": "Rasti vartotojai, pradėkite pokalbį!",
-    "posted-at": "Paskelbta:",
-    "preview-init": "Jūsų žinutė bus rodoma čia.",
-    "start": "Inicijuojama...",
-    "title": "Yutai Teahouse",
-    "waiting": "Inicijavimas pavyko, laukiami vartotojai...",
-    "libp2p-error": "Inicijavimas nepavyko, atnaujinkite arba pakeiskite savo naršyklę!"
   },
   "nl": {
     "channel": "/yutai-teahouse/nl",
@@ -298,19 +233,6 @@
     "waiting": "Inicialização bem-sucedida, aguardando usuários...",
     "libp2p-error": "Inicialização falhou, atualize ou mude seu navegador!"
   },
-  "ro": {
-    "channel": "/yutai-teahouse/ro",
-    "lang_name": "Română",
-    "notice": "Apăsați Enter pentru a începe o linie nouă. Apăsați Ctrl+Enter sau faceți clic aici pentru a trimite un mesaj.",
-    "online-peers": "În prezent online:",
-    "peers-found": "Utilizatori găsiți, începeți să discutați!",
-    "posted-at": "Postat la:",
-    "preview-init": "Mesajul dvs. va fi afișat aici.",
-    "start": "Se inițializează...",
-    "title": "Yutai Teahouse",
-    "waiting": "Inițializare reușită, așteptarea utilizatorilor...",
-    "libp2p-error": "Inițializarea a eșuat, actualizați sau schimbați browserul!"
-  },
   "ru": {
     "channel": "/yutai-teahouse/ru",
     "lang_name": "Русский",
@@ -324,45 +246,6 @@
     "waiting": "Инициализация прошла успешно, ожидание пользователей...",
     "libp2p-error": "Инициализация не удалась, обновите или измените браузер!"
   },
-  "sk": {
-    "channel": "/yutai-teahouse/sk",
-    "lang_name": "Slovenčina",
-    "notice": "Stlačte Enter pre začatie novej línie. Stlačte Ctrl+Enter alebo kliknite sem pre odoslanie správy.",
-    "online-peers": "Momentálne online:",
-    "peers-found": "Nájdení používatelia, začnite chatovať!",
-    "posted-at": "Zverejnené:",
-    "preview-init": "Vaša správa sa tu zobrazí.",
-    "start": "Inicializácia...",
-    "title": "Yutai Teahouse",
-    "waiting": "Inicializácia úspešná, čakanie na používateľov...",
-    "libp2p-error": "Inicializácia zlyhala, aktualizujte alebo zmeňte prehliadač!"
-  },
-  "sl": {
-    "channel": "/yutai-teahouse/sl",
-    "lang_name": "Slovenščina",
-    "notice": "Pritisnite Enter za začetek nove vrstice. Pritisnite Ctrl+Enter ali kliknite tukaj za pošiljanje sporočila.",
-    "online-peers": "Trenutno na spletu:",
-    "peers-found": "Uporabniki najdeni, začnite klepetati!",
-    "posted-at": "Objavljeno:",
-    "preview-init": "Vaše sporočilo bo prikazano tukaj.",
-    "start": "Inicializacija...",
-    "title": "Yutai Teahouse",
-    "waiting": "Inicializacija uspešna, čakam na uporabnike...",
-    "libp2p-error": "Inicializacija ni uspela, posodobite ali spremenite brskalnik!"
-  },
-  "sr": {
-    "channel": "/yutai-teahouse/sr",
-    "lang_name": "Српски",
-    "notice": "Притисните Ентер за почетак нове линије. Притисните Ctrl+Enter или кликните овде за слање поруке.",
-    "online-peers": "Тренутно на мрежи:",
-    "peers-found": "Корисници пронађени, започните разговор!",
-    "posted-at": "Објављено:",
-    "preview-init": "Ваша порука ће бити приказана овде.",
-    "start": "Иницијализација...",
-    "title": "Yutai Teahouse",
-    "waiting": "Иницијализација успела, чекање корисника...",
-    "libp2p-error": "Иницијализација није успела, ажурирајте или промените прегледач!"
-  },
   "sv": {
     "channel": "/yutai-teahouse/sv",
     "lang_name": "Svenska",
@@ -375,6 +258,19 @@
     "title": "Yutai Teahouse",
     "waiting": "Initiering lyckades, väntar på användare...",
     "libp2p-error": "Initiering misslyckades, uppdatera eller byt webbläsare!"
+  },
+  "test": {
+    "channel": "/yutai-teahouse/test",
+    "lang_name": "For tests",
+    "notice": "Press Enter to start a new line. Press Ctrl+Enter or click here to send a message.",
+    "online-peers": "Currently online:",
+    "peers-found": "Peers found, start chatting!",
+    "posted-at": "Posted at:",
+    "preview-init": "Your message will be displayed here.",
+    "start": "Initializing...",
+    "title": "Yutai Teahouse",
+    "waiting": "Initialization successful, waiting for peers...",
+    "libp2p-error": "Initialization failed, please update or change the browser!"
   },
   "th": {
     "channel": "/yutai-teahouse/th",
@@ -401,32 +297,6 @@
     "title": "Yutai Teahouse",
     "waiting": "Başlatma başarılı, kullanıcıları bekliyor...",
     "libp2p-error": "Başlatma başarısız oldu, tarayıcıyı güncelleyin veya değiştirin!"
-  },
-  "uk": {
-    "channel": "/yutai-teahouse/uk",
-    "lang_name": "Українська",
-    "notice": "Натисніть Enter, щоб почати новий рядок. Натисніть Ctrl+Enter або натисніть тут, щоб надіслати повідомлення.",
-    "online-peers": "Зараз онлайн:",
-    "peers-found": "Знайдені користувачі, почніть спілкуватися!",
-    "posted-at": "Опубліковано:",
-    "preview-init": "Ваше повідомлення буде відображатися тут.",
-    "start": "Ініціалізація...",
-    "title": "Yutai Teahouse",
-    "waiting": "Ініціалізація успішна, чекаю на користувачів...",
-    "libp2p-error": "Ініціалізація не вдалася, оновіть або змініть браузер!"
-  },
-  "vi": {
-    "channel": "/yutai-teahouse/vi",
-    "lang_name": "Tiếng Việt",
-    "notice": "Nhấn Enter để bắt đầu một dòng mới. Nhấn Ctrl+Enter hoặc nhấn vào đây để gửi tin nhắn.",
-    "online-peers": "Hiện đang trực tuyến:",
-    "peers-found": "Người dùng được tìm thấy, bắt đầu trò chuyện!",
-    "posted-at": "Đăng tại:",
-    "preview-init": "Tin nhắn của bạn sẽ được hiển thị ở đây.",
-    "start": "Khởi tạo...",
-    "title": "Yutai Teahouse",
-    "waiting": "Khởi tạo thành công, đang chờ người dùng...",
-    "libp2p-error": "Khởi tạo không thành công, vui lòng cập nhật hoặc thay đổi trình duyệt!"
   },
   "zh-CN": {
     "channel": "/yutai-teahouse/zh-CN",
@@ -466,18 +336,5 @@
     "title": "Yutai Teahouse",
     "waiting": "初始化成功，正在等待使用者...",
     "libp2p-error": "初始化失敗，請更新或更換瀏覽器！"
-  },
-  "test": {
-    "channel": "/yutai-teahouse/test",
-    "lang_name": "For tests",
-    "notice": "Press Enter to start a new line. Press Ctrl+Enter or click here to send a message.",
-    "online-peers": "Currently online:",
-    "peers-found": "Peers found, start chatting!",
-    "posted-at": "Posted at:",
-    "preview-init": "Your message will be displayed here.",
-    "start": "Initializing...",
-    "title": "Yutai Teahouse",
-    "waiting": "Initialization successful, waiting for peers...",
-    "libp2p-error": "Initialization failed, please update or change the browser!"
   }
 }

@@ -17,6 +17,9 @@ import languageResource from "./languages.json"
 import data from '@emoji-mart/data'
 import { Picker } from 'emoji-mart'
 import emojiResource from "./emojis.json"
+//Content filter modules
+import * as naughtyWords from 'naughty-words'
+import { array } from 'badwords-list'
 
 // Browser update configuration
 // eslint-disable-next-line no-unused-vars
@@ -52,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     e.src = "//browser-update.org/update.min.js";
     document.body.appendChild(e);
 
-    //Set up language selection
+    // Set up language selection
     const languageSelect = document.getElementById('languageSelect')
     for (const [key, value] of Object.entries(languageResource)) {
         const option = document.createElement("option")
@@ -64,11 +67,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         languageSelect.appendChild(option)
     }
-    //Detect user selection of language
+    // Detect user selection of language
     languageSelect.addEventListener('change', () => {
         localStorage.setItem("language", languageSelect.value)
         location.reload()
     })
+    // For content filter
+    function contentFilter(text) {
+        // Merge up the naughty words from different sources
+        const naughtyWordsArray = [...naughtyWords.ar,...naughtyWords.cs,...naughtyWords.da,...naughtyWords.de,...naughtyWords.en,...naughtyWords.eo,...naughtyWords.es,...naughtyWords.fa,...naughtyWords.fi,...naughtyWords.fil,...naughtyWords.fr,...naughtyWords['fr-CA-u-sd-caqc'],...naughtyWords.hi,...naughtyWords.hu,...naughtyWords.it,...naughtyWords.ja,...naughtyWords.kab,...naughtyWords.ko,...naughtyWords.nl,...naughtyWords.no,...naughtyWords.pl,...naughtyWords.pt,...naughtyWords.ru,...naughtyWords.sv,...naughtyWords.th,...naughtyWords.tlh,...naughtyWords.tr,...naughtyWords.zh,...array]
+        // And filter them!
+        naughtyWordsArray.forEach((word) => {
+            text = text.replace(word, '****')
+        })
+        return text;
+    }
     // Load emoji resources
     // As the usage of Github is not stable in China,
     // here we use a local copy of https://api.github.com/emojis.
@@ -127,7 +140,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (err) {
         alert(language["libp2p-error"])
     }
-    
 
     libp2p.services.pubsub.subscribe(language["channel"])
 
@@ -202,7 +214,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     })
     //Where it receives messages, and renders it.
     libp2p.services.pubsub.addEventListener('message', (message) => {
-        const messageString = new TextDecoder().decode(message.detail.data)
+        const messageString = contentFilter(new TextDecoder().decode(message.detail.data))
         var newElement = document.createElement("div")
         var messageFrom = document.createElement("div")
         var messageContent = document.createElement("div")
@@ -221,7 +233,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     })
     //Where it sends messages
     function send(messageText) {
-        libp2p.services.pubsub.publish(language["channel"], new TextEncoder().encode(messageText))
+        libp2p.services.pubsub.publish(language["channel"], new TextEncoder().encode(contentFilter(messageText)))
     }
     //That's how usual chat apps process Enter
     document.addEventListener('keydown', (event) => {
@@ -235,14 +247,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     notice.addEventListener('click', () => {
         send(messageBox.innerText)
         messageBox.innerText = ''
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
+        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(contentFilter(messageBox.innerText), { mangle: false, headerIds: false }))
     })
     //Detect the change of the message box more precisely
     messageBox.addEventListener('keyup', () => {
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
+        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(contentFilter(messageBox.innerText), { mangle: false, headerIds: false }))
     })
     messageBox.addEventListener("input", () => {
-        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
+        messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(contentFilter(messageBox.innerText), { mangle: false, headerIds: false }))
     })
     //To avoid residual connections when closing the window
     window.addEventListener('beforeunload', function () {
@@ -254,7 +266,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         data,
         onEmojiSelect: (emoji) => {
             messageBox.innerText += emoji.shortcodes
-            messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(messageBox.innerText, { mangle: false, headerIds: false }))
+            messagePreview.innerHTML = DOMPurify.sanitize(marked.parse(contentFilter(messageBox.innerText), { mangle: false, headerIds: false }))
         }
     }
 
