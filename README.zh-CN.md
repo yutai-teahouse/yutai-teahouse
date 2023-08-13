@@ -110,6 +110,8 @@ npm run build
 
 [naughty-words](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words) 及其依赖 ( 在`package.json` 和`package-lock.json`中列举）
 
+[Day-night-toggle-button](https://github.com/Xiumuzaidiao/Day-night-toggle-button)
+
 ## 联系我
 
 Email: i-am-cjc@i-am-cjc.tech

@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const messagePreview = document.getElementById('messagePreview')
     const notice = document.getElementById('notice')
     const emojiButton = document.getElementById('emojiButton')
+    const darkModeToggleBtn = document.getElementById('darkModeToggleBtn')
     messageBox.setAttribute("data-placeholder", language["start"])
     notice.textContent = language["notice"]
     messagePreview.setAttribute("data-palceholder", language["preview-init"])
@@ -75,7 +76,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     // For content filter
     function contentFilter(text) {
         // Merge up the naughty words from different sources
-        const naughtyWordsArray = [...naughtyWords.ar,...naughtyWords.cs,...naughtyWords.da,...naughtyWords.de,...naughtyWords.en,...naughtyWords.eo,...naughtyWords.es,...naughtyWords.fa,...naughtyWords.fi,...naughtyWords.fil,...naughtyWords.fr,...naughtyWords['fr-CA-u-sd-caqc'],...naughtyWords.hi,...naughtyWords.hu,...naughtyWords.it,...naughtyWords.ja,...naughtyWords.kab,...naughtyWords.ko,...naughtyWords.nl,...naughtyWords.no,...naughtyWords.pl,...naughtyWords.pt,...naughtyWords.ru,...naughtyWords.sv,...naughtyWords.th,...naughtyWords.tlh,...naughtyWords.tr,...naughtyWords.zh,...array]
+        const naughtyWordsArray = [...naughtyWords.ar,
+            ...naughtyWords.cs,
+            ...naughtyWords.da,
+            ...naughtyWords.de,
+            ...naughtyWords.en,
+            ...naughtyWords.eo,
+            ...naughtyWords.es,
+            ...naughtyWords.fa,
+            ...naughtyWords.fi,
+            ...naughtyWords.fil,
+            ...naughtyWords.fr,
+            ...naughtyWords['fr-CA-u-sd-caqc'],
+            ...naughtyWords.hi,
+            ...naughtyWords.hu,
+            ...naughtyWords.it,
+            ...naughtyWords.ja,
+            ...naughtyWords.kab,
+            ...naughtyWords.ko,
+            ...naughtyWords.nl,
+            ...naughtyWords.no,
+            ...naughtyWords.pl,
+            ...naughtyWords.pt,
+            ...naughtyWords.ru,
+            ...naughtyWords.sv,
+            ...naughtyWords.th,
+            ...naughtyWords.tlh,
+            ...naughtyWords.tr,
+            ...naughtyWords.zh,
+            ...array]
         // And filter them!
         naughtyWordsArray.forEach((word) => {
             text = text.replace(word, '****')
@@ -220,14 +249,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         var messageContent = document.createElement("div")
         var timestamp = document.createElement("div")
         messageFrom.textContent = String(message.detail.from)
-        messageFrom.className = "text-sm text-sky-600 inline-block pr-4"
+        messageFrom.className = "text-sm dark:text-sky-600 text-sky-800 inline-block pr-4"
         timestamp.textContent = language["posted-at"] + " " + new Date().toLocaleTimeString()
         timestamp.className = "text-xs text-gray-500 inline-block"
         messageContent.innerHTML = `<div class="messageContents">${DOMPurify.sanitize(marked.parse(messageString, { mangle: false, headerIds: false }))}</div>`
         newElement.appendChild(messageFrom)
         newElement.appendChild(timestamp)
         newElement.appendChild(messageContent)
-        newElement.className = "bg-discord-dark hover:bg-discord-grey"
+        newElement.className = "dark:bg-discord-dark dark:hover:bg-discord-grey bg-gray-100 hover:bg-gray-300"
         output.appendChild(newElement)
         document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight
     })
@@ -270,6 +299,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    //Listen for dark mode toggle button
+    darkModeToggleBtn.addEventListener('change', evt => {
+        if (evt.detail === "dark") {
+            document.getElementsByTagName("html")[0].classList.add("dark")
+        } else {
+            document.getElementsByTagName("html")[0].classList.remove("dark")
+        }
+    })
     
     //config the emoji picker
     const emojiPicker = new Picker(pickerOptions)

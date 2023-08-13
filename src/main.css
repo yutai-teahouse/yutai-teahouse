@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-div[contenteditable]:empty:before {
+div:empty:before {
     content: attr(data-placeholder);
-    color: #CCCCCC;
+    color: #6b7280;
 }
 
 .github-corner:hover .octo-arm {
